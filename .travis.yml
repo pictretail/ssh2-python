@@ -26,7 +26,7 @@ install:
   - python setup.py build_ext --inplace
   - eval "$(ssh-agent -s)"
 script:
-  - nosetests
+  - pytest tests
   - flake8 ssh2
   # Test source distribution builds
   - python setup.py sdist
